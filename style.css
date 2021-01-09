@@ -1,0 +1,32 @@
+
+
+#highscore {
+    height: 200px;
+    text-align: center;
+    background-color:red;
+    padding:20px;
+
+}
+
+#timer {
+    height: 200px;
+    text-align: center;
+    background-color: blueviolet;
+    padding:20px;
+
+
+}
+
+.container-fluid {
+    height: 700px;
+    width: 100%;
+    background-color: chocolate;
+}
+
+#qAndA {
+    list-style: none;
+}
+
+button {
+    margin: 30px;
+}
