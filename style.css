@@ -18,15 +18,35 @@
 }
 
 .container-fluid {
-    height: 700px;
+    height: 100%;
     width: 100%;
     background-color: chocolate;
 }
 
+#main {
+    width:100%;
+}
+
+#header {
+    text-align: center;
+    padding-top: 40px;
+}
+
+#question-container {
+    width: 100%;
+}
+#question {
+    background-color: seagreen;
+    width: 100;
+    height: 100px;
+}
+
 #qAndA {
     list-style: none;
+    text-align: center;
 }
 
 button {
     margin: 30px;
 }
+
