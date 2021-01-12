@@ -5,11 +5,13 @@ $(function() {
     $ans2 = $('#ans2');
     $ans3 = $('#ans3');
     $ans4 = $('#ans4');
-    $right = $('.ansRight');
-    $wrong = $('.ansWrong')
+    // $correct = $('.correct');
+    // $incorrect = $('.incorrect')
     $question = $('#question');
     $timer = $('#timer');
     $highScore = $('#highscore')
+
+    // timer
     $counter = 90;
     $interval = setInterval(function() {
     $counter--;
@@ -22,8 +24,6 @@ $(function() {
     }
 }, 1000);
     
-    // console.log($wrong);
-
 
     $('ul').hide();
     $question.hide();
@@ -32,17 +32,54 @@ $(function() {
         $startButton.hide();
         $question.show();
         $('ul').show();
-        // $timer.show();     
+        $timer.show();     
     })
 })
 
+
+$(function() {
+    $question.html('In the UK, the abrreviation NHS stands for National what Service?');
+    $ans1.html('Humanity');
+    $ans2.html('Health').attr('class', correct)
+    $ans3.html('Honour');
+    $ans4.html('Household');
+})
+
+$(function() {
+    $question.html('Which Disney character famously leaves behind a glass slipper at a royal ball?');
+    $ans1.html('Pocahontas');
+    $ans2.html('Sleeping Beauty');
+    $ans3.html('Cinderella').attr('class', correct)
+    $ans4.html('Elsa');
+
+})
+
+$(function() {
+    $question.html('What does the word loquacious mean?');
+    $ans1.html('Angry');
+    $ans2.html('Chatty').attr('class', correct)
+    $ans3.html('Beautiful');
+    $ans4.html('Shy');
+
+})
  
-// quizlist
-// question
-// ans1
-// ans2
-// ans3
-// ans4
+$(function() {
+    $question.html('The hammer and sickle is on of the most recognizeable symbols of which political ideology?');
+    $ans1.html('Rebublicanism');
+    $ans2.html('Communism').attr('class', correct);
+    $ans3.html('Conservatism');
+    $ans4.html('Liberalism');
+
+})
+
+$(function() {
+    $question.html('Which toys have been marketed with the phrase "robots in disguise"?');
+    $ans1.html('Bratz Dolls');
+    $ans2.html('Sylvanian Families');
+    $ans3.html('Hatchimals');
+    $ans4.html('Transformers').attr('class', correct)
+
+})
 
 // if class = correct, then some code for a correct answer,
 // else if class != correct, then some alerts for a wrong answer.
