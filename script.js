@@ -93,9 +93,12 @@ $(function() {
 // })
 
 // // if class = correct, then some code for a correct answer,
-// else if class != correct, then some alerts for a wrong answer.
-
-// next question
+// else if class = incorrect, then some alerts for a wrong answer.
+// if (class == correct), {
+    
+// } else if (class == incorrect),
+    
+// // next question
 
 // push new question/answer array
 
