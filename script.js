@@ -10,19 +10,10 @@ $(function() {
     $question = $('#question');
     $timer = $('#timer');
     $highScore = $('#highscore')
+    $mysound = 
 
     // timer
-    $counter = 90;
-    $interval = setInterval(function() {
-    $counter--;
-    if ($counter <= 0) {
-     		clearInterval($interval);
-      	$('#timer').html("<h1>Count down complete...Quiz is over</h1>");  
-        return;
-    }else{
-    	$('#timer').text($counter);
-    }
-}, 1000);
+   
     
 
     $('ul').hide();
@@ -32,7 +23,18 @@ $(function() {
         $startButton.hide();
         $question.show();
         $('ul').show();
-        $timer.show();     
+        $timer.show();
+        $counter = 90;
+        $interval = setInterval(function() {
+        $counter--;
+        if ($counter <= 0) {
+                 clearInterval($interval);
+              $('#timer').html("<h1>Count down complete...Quiz is over</h1>");  
+            return;
+        }else{
+            $('#timer').text($counter);
+        }
+    }, 1000);     
     })
 })
 
@@ -81,7 +83,16 @@ $(function() {
 
 })
 
-// if class = correct, then some code for a correct answer,
+// $(function(class) {
+//     if (class == correct), {
+//         mysound.play();
+//     } else if (class == incorrect),
+//     {mysoundbad.play()}
+
+    
+// })
+
+// // if class = correct, then some code for a correct answer,
 // else if class != correct, then some alerts for a wrong answer.
 
 // next question
