@@ -5,26 +5,36 @@ $(function() {
     var $ans2 = $('#ans2');
     var $ans3 = $('#ans3');
     var $ans4 = $('#ans4');
+    var $right = $('.ansRight');
+    var $wrong = $('.ansWrong')
     var $question = $('#question');
     var $timer = $('#timer');
     var $highScore = $('#highscore')
+    var counter = 90;
+    var interval = setInterval(function() {
+    counter--;
+    if (counter <= 0) {
+     		clearInterval(interval);
+      	$('#timer').html("<h1>Count down complete...Quiz is over</h1>");  
+        return;
+    }else{
+    	$('#timer').text(counter);
+    }
+}, 1000);
     
-    // $ans1.hide();
-    // $ans2.hide();
-    // $ans3.hide();
-    // $ans4.hide();
+    // console.log($wrong);
+
+
     $('ul').hide();
     $question.hide();
+    $timer.hide();
     $('#startButton').on('click', function() {
         $startButton.hide();
         $question.show();
         $('ul').show();
-        // $ans1.show();
-        // $ans2.show();
-        // $ans3.show();
-        // $ans4.show();
-        $timer.start();
-
+        $timer.show();
+        
+        
     })
 })
 

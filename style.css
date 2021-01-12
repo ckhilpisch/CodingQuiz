@@ -1,15 +1,15 @@
 
 
-#highscore {
-    height: 200px;
+#highscoreDiv {
+    height: 100px;
     text-align: center;
     background-color:red;
     padding:20px;
 
 }
 
-#timer {
-    height: 200px;
+#timerDiv {
+    height: 100px;
     text-align: center;
     background-color: blueviolet;
     padding:20px;
