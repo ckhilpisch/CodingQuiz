@@ -4,7 +4,7 @@ body {
     background-size: cover;
 }
 
-#highscoreDiv {
+#highScoreDisplay {
     height: 100px;
     text-align: center;
     color:white;
@@ -73,5 +73,24 @@ button {
     font-weight: bolder;
     margin: auto;
     text-align: center;
+    background-color: rgb(63, 8, 216);
     
+}
+
+#highScoreDiv {
+    text-align: center;
+    margin: auto;
+
+}
+
+.card {
+    color: white;
+    background-color: black;
+    border-color: white;
+    border-style: solid;
+    width: 100%;
+}
+.input-group {
+    text-align: center;
+    margin-right: 100px;
 }

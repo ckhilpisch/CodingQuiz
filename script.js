@@ -8,13 +8,18 @@ $(function () {
   $ans4 = $("#ans4");
   $question = $("#question");
   $timer = $("#timer");
-  $highScore = $("#highscore");
+  $highScore = $("#highScore");
   $yourScore = "";
   $gameOver = $("#gameOver");
+  $highScoreDiv = $("#highScoreDiv");
+  $intials = $("#intials");
+  // $intialsDiv = $()
 
   $("ul").hide();
   $question.hide();
   $timer.hide();
+  $highScoreDiv.hide();
+
   $("#startButton").on("click", function () {
     $startButton.hide();
     $question.show();
@@ -22,16 +27,16 @@ $(function () {
     $timer.show();
     quest0();
 
-    function decrement () {
-      $(".incorrect").on("click", function () {
-        counter -=10;
-      });
-    }  
+    // function decrement () {
+    //   $(".incorrect").on("click", function () {
+    //     counter -=10;
+    //   });
+    // }  
   
     $counter = 90;
     $interval = setInterval(function () {
       $counter--;
-      decrement();
+      // decrement();
       if ($counter <= 0) {
         clearInterval($interval);
         $("#timer").html("<h1>Count down complete...Quiz is over</h1>");
@@ -168,9 +173,18 @@ $(function () {
     $question.hide();
     $gameOver.html("GAME OVER!!!!  YOUR SCORE IS " + $counter + " !!!!");
     $yourScore = $counter;
+    $highScoreDiv.show();
     
   }
   
+  // function highScoreInput() {
+  //   $("ul").hide();
+  //   $question.hide();
+  //   $gameOver.hide();
+  //   $highScoreDiv.show();
+
+  // }
+
 
 // // $(function(class) {
 // //     if (class == correct), {

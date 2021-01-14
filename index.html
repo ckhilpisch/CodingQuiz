@@ -10,7 +10,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6" id="highscoreDiv"><h1> <span id="highscore">High Scores</span></h1></div>
+            <div class="col-md-6" id="highScoreDisplay"><h1> <span id="highScore">High Score</span></h1></div>
             <div class="col-md-6" id="timerDiv"><h1><span id="timer">90</span></h1></div>
     <div class="row">
         <div class="col-xl-2 col-lg-2, col-md-3, col-sm-2"></div>
@@ -24,8 +24,35 @@
                 <li><button type="button" id="ans4" class="incorrect"></button></li>
             </ul>
             <div id="gameOver"></div>
-            <div id="highScoreDiv"></div>
-        </div>
+            <div id="row">
+                <div class="col-xl-2 col-lg-2, col-md-3, col-sm-2"></div>
+                <div class ="col-xl-8, col-lg-8, col-md-6, col-sm-8" id="highScoreDiv">
+                    <div class="clearfix">
+                        <div class="card">
+                        <h1>High Scores</h1>
+                        <div id="msg"></div>
+                        <form method="POST">
+                            <div class="input-group">
+                            <label for="intials">Intials</label>
+                            <input type="text" name="intials" id="intials" placeholder="Add Intials Here" />
+                            </div>
+                            <!-- <div class="input-group">
+                            <label for="score">Score</label>
+                            <input type="number" name="score" id="score" placeholder="9999999999" />
+                            </div> -->
+                                <button id="send">Send</button>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Previous High Scores:</h2>
+                        <p><strong>Intials:</strong> <span id="previous-intials"></span></p>
+                        <p><strong>Scores:</strong> <span id="previous-scores"></span></p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2, col-md-3, col-sm-2"></div>  
+            </div>
+        </div>    
         <div class="col-xl-2 col-lg-2, col-md-3, col-sm-2"></div>
     </div>
     </div>
