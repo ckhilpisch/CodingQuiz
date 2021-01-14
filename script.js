@@ -22,9 +22,16 @@ $(function () {
     $timer.show();
     quest0();
 
+    function decrement () {
+      $(".incorrect").on("click", function () {
+        counter -=10;
+      });
+    }  
+  
     $counter = 90;
     $interval = setInterval(function () {
       $counter--;
+      decrement();
       if ($counter <= 0) {
         clearInterval($interval);
         $("#timer").html("<h1>Count down complete...Quiz is over</h1>");
@@ -33,8 +40,8 @@ $(function () {
         $("#timer").text($counter);
       }
     }, 1000);
-  });
-
+  })
+  
   function quest0() {
     $question.html(
       "In the UK, the abrreviation NHS stands for National what Service?"
@@ -49,10 +56,6 @@ $(function () {
       $(".correct,.incorrect").off();
       $ans2.removeClass("correct").addClass("incorrect");
       quest1();
-    });
-  
-    $(".incorrect").on("click", function () {
-      console.log("decrement timer");
     });
   }
   
