@@ -13,6 +13,9 @@ $(function () {
   $gameOver = $("#gameOver");
   $highScoreDiv = $("#highScoreDiv");
   $intials = $("#intials");
+  $sendButton = $("#send");
+  $userIntialsSpan = $("user-intials");
+  $userHighScoreSpan = $("user-scores");
   // $intialsDiv = $()
 
   $("ul").hide();
@@ -176,6 +179,35 @@ $(function () {
     $highScoreDiv.show();
     
   }
+
+  function renderLastRegistered() {
+    $saveIntials = localStorage.getItem("locaIntials");
+    $saveScore = localStorage.getItem("localScore");
+  ;
+    $userIntialsSpan.html = $saveIntials;
+    $userHighScoreSpan.html = $saveScore;
+  }
+  
+  $sendButton.on("click", function (event) {
+    event.preventDefault();
+  
+    $intials = $("#intials").value;
+    $score = $yourScore
+  
+  
+  
+    if (intials === "") {
+      displayMessage("error", "Intials cannot be blank");
+    } else {
+      displayMessage("success", "High Score Saved");
+  
+    
+      localStorage.setItem("localIntials", intials);
+      localStorage.setItem("localScore", score);
+      renderLastRegistered();
+  
+    }
+  });
   
   // function highScoreInput() {
   //   $("ul").hide();
