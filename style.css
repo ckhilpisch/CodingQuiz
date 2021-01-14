@@ -27,16 +27,16 @@ body {
 
 #main {
     width: 100%;
-    float: right;
-    margin: 40px;
-    margin-left:300px;
+    margin: auto;
     padding:40px;
+    position: fixed;
+    margin-left: 200px;
 }
 
 #startButton {
     width: 100%;
-    float: left;
     margin: 40px;
+    margin-left: 350px;
 }
 
 #question-container {
@@ -67,6 +67,11 @@ button {
     border-style: solid;
 }
 
-.correct {
+#gameOver {
+    color:rgb(240, 194, 10);
+    font-size: 100px;
+    font-weight: bolder;
+    margin: auto;
+    text-align: center;
     
 }
