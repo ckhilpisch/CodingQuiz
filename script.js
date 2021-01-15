@@ -185,4 +185,12 @@ $(function () {
     yourScore = counter;
     clearInterval(interval); 
   }
+
+  function passValue() {
+    var score = yourScore
+    localStorage.setItem("textvalue", score);
+    return false;
+  }
+  passValue ();
+
   });
