@@ -120,3 +120,14 @@ input {
     height: 50px;
     text-align: center;
 }
+
+#endHeader {
+    font-size: larger;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-color: white;
+    border-style: solid;
+    align-items: center;
+
+}
