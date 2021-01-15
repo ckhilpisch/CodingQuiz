@@ -2,6 +2,7 @@ body {
     background-image: url(Milliset.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
 }
 
 #highScoreDisplay {
@@ -36,7 +37,7 @@ body {
 #startButton {
     width: 100%;
     margin: 40px;
-    margin-left: 350px;
+    align-items: center;
 }
 
 #question-container {

@@ -12,12 +12,7 @@ $(function () {
   yourScore = "";
   gameOver = $("#gameOver");
   highScoreDiv = $("#highScoreDiv");
-  // $intials = $("#intials");
-  // $sendButton = $("#send");
-  // $userIntialsSpan = $("user-intials");
-  // $userHighScoreSpan = $("user-scores");
-  // $intialsDiv = $()
-
+  
   $("ul").hide();
   question.hide();
   timer.hide();
@@ -30,16 +25,9 @@ $(function () {
     timer.show();
     quest0();
 
-    // function decrement () {
-    //   $(".incorrect").on("click", function () {
-    //     counter -=10;
-    //   });
-    // }  
-  
     counter = 90;
     interval = setInterval(function () {
       counter--;
-      // decrement();
       if (counter <= 0) {
         clearInterval(interval);
         $("#timer").html("<h1>Count down complete...Quiz is over</h1>");
@@ -49,7 +37,25 @@ $(function () {
       }
     }, 1000);
   })
-  
+
+  function decrement() {
+    counter-= 10;
+  }
+
+  function timerThings () {
+    if (counter >= 10) {
+      decrement();
+    } else {
+      clearInterval(interval);
+      counter = 0;
+      timer.html(counter);
+      $("ul").hide();
+      question.hide();
+      gameOver.html("GAME OVER!!!!  YOUR SCORE IS " + counter + " !!!!");
+      yourScore = counter;
+      
+    }
+  }
   function quest0() {
     question.html(
       "In the UK, the abrreviation NHS stands for National what Service?"
@@ -64,7 +70,11 @@ $(function () {
       $(".correct,.incorrect").off();
       ans2.removeClass("correct").addClass("incorrect");
       quest1();
+
     });
+    $(".incorrect").on("click", function () {
+      timerThings();
+    })
   }
   
   function quest1() {
@@ -83,6 +93,9 @@ $(function () {
   
       quest2();
     });
+    $(".incorrect").on("click", function () {
+      timerThings();
+    })
   }
   
   function quest2() {
@@ -97,6 +110,9 @@ $(function () {
       $(".correct,.incorrect").off();
       ans2.removeClass("correct").addClass("incorrect");
       quest3();
+    });
+    $(".incorrect").on("click", function () {
+      timerThings();
     });
 
     
@@ -119,7 +135,7 @@ $(function () {
     });
   
     $(".incorrect").on("click", function () {
-      console.log("decrement timer");
+      timerThings();
     });
   }
   
@@ -140,7 +156,7 @@ $(function () {
     });
   
     $(".incorrect").on("click", function () {
-      console.log("decrement timer");
+      timerThings();
     });
   }
   
@@ -167,68 +183,6 @@ $(function () {
     question.hide();
     gameOver.html("GAME OVER!!!!  YOUR SCORE IS " + counter + " !!!!");
     yourScore = counter;
-    highScoreDiv.show();
-    localStorage.setItem(yourscore);
-    
+    clearInterval(interval); 
   }
-
-  // function renderLastRegistered() {
-  //   $saveIntials = localStorage.getItem("locaIntials");
-  //   $saveScore = localStorage.getItem("localScore");
-  // ;
-  //   $userIntialsSpan.html = $saveIntials;
-  //   $userHighScoreSpan.html = $saveScore;
-  // }
-  
-  // $sendButton.on("click", function (event) {
-  //   event.preventDefault();
-  
-  //   $intials = $("#intials").value;
-  //   $score = $yourScore
-  
-  
-  
-  //   if (intials === "") {
-  //     displayMessage("error", "Intials cannot be blank");
-  //   } else {
-  //     displayMessage("success", "High Score Saved");
-  
-    
-  //     localStorage.setItem("localIntials", intials);
-  //     localStorage.setItem("localScore", score);
-  //     renderLastRegistered();
-  
-  //   }
-  // });
-  
-  // function highScoreInput() {
-  //   $("ul").hide();
-  //   $question.hide();
-  //   $gameOver.hide();
-  //   $highScoreDiv.show();
-
-  // }
-
-
-// // $(function(class) {
-// //     if (class == correct), {
-// //         mysound.play();
-// //     } else if (class == incorrect),
-// //     {mysoundbad.play()}
-
-// // })
-
-// // // if class = correct, then some code for a correct answer,
-// // else if class = incorrect, then some alerts for a wrong answer.
-// // if (class == correct), {
-
-// // } else if (class == incorrect),
-
-// // // next question
-
-// // push new question/answer array
-
-// // repeat until finished
-// // show scorereceived
-// // option to add intials //
   });
