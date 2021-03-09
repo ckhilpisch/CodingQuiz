@@ -1,7 +1,6 @@
-# Assignment 4: Coding Quiz
-For the fourth assignment in class, we had to create a quiz, with a theme of our choice.   The quiz had to move through questions, and the score would be the remainder of time left on the countdown clock.   Wrong answers had to decrement the timer by 10 seconds.   For a bonus we could have a high scores page that would allow the user to enter intials into a high scores board.  
-This was the target site we were given at the beginning of class:
-![Target Photo](assets/Target.png)  
+# Coding Quiz
+Tasked with creating a quiz, with a theme of my choice.   The quiz had to move through questions, and the score would be the remainder of time left on the countdown clock.   Wrong answers had to decrement the timer by 10 seconds.   Also include a high scores page that would allow the user to enter intials into a high scores board.  
+ 
 
 ## Technologies Used:
 ### HTML
